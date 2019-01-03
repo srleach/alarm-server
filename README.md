@@ -15,6 +15,7 @@ pip install python-daemon
 ### Configuring allowed panel addresses
 - Allowed panel addresses should be entered in tab separated format innto `/etc/alarmserver/accounts.conf` (or wherever you configure this file to be - see `alarmserver.conf`)
 - Example: `1234 192.168.1.2` where `1234` is the account number you configure in Wintex/On Panel.
+
 ## Configuring the Alarm Panel
 The simplest method to configure the server and panel communication is to use Wintex to configure the ARC settings.
 ### Using Wintex
@@ -26,6 +27,12 @@ The simplest method to configure the server and panel communication is to use Wi
 - Enter the IP address and port of your server in the `Pri Tel No` field in the format `ip/port` (For example `192.168.1.92/10500`)
 - Ensure `Connect via IP` is checked
 - Save / send current page.
+
+### Configuring Polling
+- Navigate to `Radio-Pad and COM Port Options`
+- In the `COM-IP Details` section, choose the COM port that's paired with your COM-IP module (This will be COM2 if you're using a SMARTCOM)
+- Ensure the `Polling/SMG IP Address` and `Name/SMG Port` are set to those of `alarm-server`
+
 
 ## Running the Server
 ```bash
